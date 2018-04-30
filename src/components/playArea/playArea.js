@@ -49,7 +49,7 @@ class PlayAreaComponent extends Component {
 
 const mapStateToProps = (state) => ({
     step: state.gameState.steps[state.gameState.steps.length - 1],
-    stepCount: state.gameState.steps.length,
+    stepCount: state.gameState.steps.length - 1,
     rowSize: state.gameState.rowSize,
     movableValues: state.gameState.movableValues,
 });

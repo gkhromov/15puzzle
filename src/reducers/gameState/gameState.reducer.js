@@ -19,6 +19,7 @@ export const gameStateReducer = (state = initialState, action) => {
                 steps.pop();
                 return {
                     ...state,
+                    movableValues: getMovableValues(steps[steps.length - 1]),
                     steps,
                 };
             }
