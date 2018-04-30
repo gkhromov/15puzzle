@@ -1,6 +1,8 @@
 .root {
     background-color: #ccc;
     padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
 }
 
 .root:hover {

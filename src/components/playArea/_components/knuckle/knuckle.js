@@ -1,12 +1,18 @@
 import React, {Component} from 'react';
 import styles from './knuckle.css';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 
 class KnuckleComponent extends Component {
     render() {
-        const value = this.props.value ? String(this.props.value) : '';
+        const classes = classNames({
+            [styles.root]: true,
+            [styles.nonZero]: !!this.props.value,
+            [styles.movable]: this.props.movable,
+        });
+        const value = this.props.value ? String(this.props.value) : "";
         return (
-            <div className={styles.root} onClick={this.onClick}>
+            <div className={classes} onClick={this.onClick}>
                 {value}
             </div>
         );

@@ -11,6 +11,7 @@ class PlayAreaComponent extends Component {
             <div className={styles.root}>
                 <div className={styles.buttons}>
                     <Button text="Back" onClick={this.props.gameStateGoBack}/>
+                    <div>Steps: {this.props.stepCount}</div>
                     <Button text="Reset" onClick={this.props.gameStateInit}/>
                 </div>
                 {this.renderLines()}
@@ -48,6 +49,7 @@ class PlayAreaComponent extends Component {
 
 const mapStateToProps = (state) => ({
     step: state.gameState.steps[state.gameState.steps.length - 1],
+    stepCount: state.gameState.steps.length,
     rowSize: state.gameState.rowSize,
     movableValues: state.gameState.movableValues,
 });
