@@ -1,0 +1,9 @@
+.root {
+    background-color: #ccc;
+    padding: 5px;
+}
+
+.root:hover {
+    background-color: #eee;
+    cursor: pointer;
+}

@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import styles from './app.css';
+import PlayArea from "../playArea/playArea";
 
-class App extends Component {
+class AppComponent extends Component {
     render() {
         return (
             <div className={styles.root}>
-                Test
+                <PlayArea/>
             </div>
         );
     }
 }
 
-export default App;
+export default AppComponent;
