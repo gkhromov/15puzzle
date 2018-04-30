@@ -2,7 +2,7 @@ import {getInitialState, getMovableValues} from "./gameState.helpers";
 import {
     GAME_STATE_GO_BACK,
     GAME_STATE_INIT,
-    GAME_STATE_INIT_WITH_STEP, GAME_STATE_MOVE_VALUE
+    GAME_STATE_MOVE_VALUE
 } from "./gameState.actions";
 import {ROW_SIZE} from "./gameState.constants";
 
@@ -12,12 +12,6 @@ export const gameStateReducer = (state = initialState, action) => {
         case GAME_STATE_INIT:
             return {
                 ...getInitialState(ROW_SIZE),
-            };
-        case GAME_STATE_INIT_WITH_STEP:
-            return {
-                ...getInitialState(ROW_SIZE),
-                steps: [...action.payload],
-                movableValues: getMovableValues(action.payload),
             };
         case GAME_STATE_GO_BACK:
             if (state.steps.length > 1) {

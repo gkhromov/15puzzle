@@ -4,7 +4,6 @@ export const GAME_STATE_INIT = prefix + 'INIT';
 export function gameStateInit() {
     return {type: GAME_STATE_INIT};
 }
-export const GAME_STATE_INIT_WITH_STEP = prefix + 'INIT_WITH_STEP';
 export const GAME_STATE_GO_BACK = prefix + 'GO_BACK';
 export function gameStateGoBack() {
     return {type: GAME_STATE_GO_BACK};
